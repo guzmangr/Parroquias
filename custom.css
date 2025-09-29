@@ -1,0 +1,153 @@
+
+/* === Justificado en contenido del popup === */
+#modalContent p,
+#modalContent li,
+#modalBody p,
+#modalBody li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+#modalContent, #modalBody { scroll-behavior: auto; }
+/* === Fin justificado === */
+
+/* Tipografía global Montserrat */
+html, body {
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/* Título del sitio en mayúsculas */
+#siteTitle, .site-title, header h1, h1.title {
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+
+/* === Alineación unificada de listas en el modal === */
+#modalContent ul,
+#modalBody ul {
+  margin: 0 0 0.9rem 1.2rem;   /* mismo margen para todas */
+  padding-left: 1.2rem;        /* asegurar indentación homogénea */
+  list-style-position: outside;
+}
+#modalContent li,
+#modalBody li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* Primera lista tras un h2: separar igual en todos los apartados */
+#modalContent h2 + ul,
+#modalBody h2 + ul {
+  margin-top: 0.35rem;
+}
+/* === Fin alineación listas === */
+
+
+/* === Anti-memoria de desplazamiento y justificado homogéneo === */
+#modalContent, #modalBody { 
+  scroll-behavior: auto;
+  overflow-anchor: none; /* evita reposicionamiento por anclaje */
+}
+#modalContent p, #modalBody p { 
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* === Fin === */
+
+
+/* === Justificado global en todos los apartados === */
+#modalContent p, #modalBody p, #modalContent li, #modalBody li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* === Fin justificado global === */
+
+
+/* === Encabezados de secciones del modal: formato unificado === */
+#modalContent h2,
+#modalBody h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  font-weight: 600;
+  text-align: left;        /* alineación uniforme */
+  letter-spacing: .01em;
+}
+/* Uniformar separación de la primera lista o párrafo tras un h2 */
+#modalContent h2 + ul,
+#modalBody h2 + ul,
+#modalContent h2 + p,
+#modalBody h2 + p {
+  margin-top: 0.35rem;
+}
+/* === Fin: encabezados unificados === */
+
+
+/* === H2 sin viñetas/indentación dentro del modal === */
+#modalContent h2, #modalBody h2 {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+/* Asegurar que las listas no engloban encabezados por estilo (el parser ya cierra <ul>) */
+#modalContent ul h2, #modalBody ul h2 { 
+  list-style: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+
+
+/* === Listas sólo dentro de secciones (.sec) === */
+#modalContent .sec ul,
+#modalBody .sec ul {
+  margin: 0 0 0.9rem 1.2rem;
+  padding-left: 1.2rem;
+  list-style-position: outside;
+}
+#modalContent .sec li,
+#modalBody .sec li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* Encabezados H2: sin indentación ni bullets, alineados a la izquierda */
+#modalContent .sec h2,
+#modalBody .sec h2 {
+  list-style: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left;
+}
+/* Evitar herencia accidental si quedara algún ul abierto (por seguridad visual) */
+#modalContent ul h2, #modalBody ul h2 {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+
+
+/* === Espaciado compacto entre apartados === */
+#modalContent .sec h2,
+#modalBody .sec h2 {
+  margin-top: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+#modalContent .sec p,
+#modalBody .sec p {
+  margin: 0 0 0.6rem;
+}
+#modalContent .sec ul,
+#modalBody .sec ul {
+  margin: 0 0 0.6rem 1.2rem;
+  padding-left: 1.2rem;
+}
+#modalContent .sec h2 + ul,
+#modalBody .sec h2 + ul,
+#modalContent .sec h2 + p,
+#modalBody .sec h2 + p {
+  margin-top: 0.2rem;
+}
+.sec__spacer { height: 0.3rem; }
+/* === Fin espaciado compacto === */
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa Interactivo · Parroquias de Oviedo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="custom.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <h1>Parroquias de Oviedo</h1>
+  <p class="subtitle">Explora las parroquias: haz clic en el mapa o usa el listado.</p>
+</header>
+
+<main class="layout">
+  <section class="map-wrapper" aria-label="Mapa de parroquias">
+    <div id="svgContainer" class="svg-container" aria-live="polite"></div>
+  </section>
+
+  <aside class="panel" aria-label="Panel lateral con buscador y lista de parroquias">
+    <div class="panel-header">
+      <input id="searchInput" type="search" placeholder="Buscar parroquia..." aria-label="Buscar parroquia" />
+    </div>
+    <ul id="parishList" class="parish-list" role="listbox" aria-label="Listado de parroquias"></ul>
+  </aside>
+</main>
+
+<div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal__dialog" role="document">
+    <button class="modal__close" id="modalClose" aria-label="Cerrar ventana">×</button>
+    <h2 id="modalTitle"></h2>
+    <div class="modal__body">
+      <div class="carousel" id="carousel" aria-roledescription="carrusel">
+        <div class="carousel__viewport" id="carouselViewport"></div>
+        <div class="carousel__controls">
+          <button id="prevBtn" class="carousel__btn" aria-label="Anterior">‹</button>
+          <button id="nextBtn" class="carousel__btn" aria-label="Siguiente">›</button>
+        </div>
+        <div class="carousel__dots" id="carouselDots" aria-label="Paginación del carrusel"></div>
+      </div>
+      <div id="modalContent" class="modal__content prose"></div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <small>Creado por "Área de Empleo Ayuntamiento de Oviedo."</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
