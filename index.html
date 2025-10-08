@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="custom.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+
 </head>
 <body>
 <header class="site-header">
@@ -21,7 +25,7 @@
 
   <aside class="panel" aria-label="Panel lateral con buscador y lista de parroquias">
     <div class="panel-header">
-      <input id="searchInput" type="search" placeholder="Buscar parroquia..." aria-label="Buscar parroquia" />
+      <input id="searchInput" type="search" placeholder="Buscar parroquia" aria-label="Buscar parroquia" />
     </div>
     <ul id="parishList" class="parish-list" role="listbox" aria-label="Listado de parroquias"></ul>
   </aside>
@@ -32,15 +36,29 @@
     <button class="modal__close" id="modalClose" aria-label="Cerrar ventana">×</button>
     <h2 id="modalTitle"></h2>
     <div class="modal__body">
-      <div class="carousel" id="carousel" aria-roledescription="carrusel">
-        <div class="carousel__viewport" id="carouselViewport"></div>
-        <div class="carousel__controls">
-          <button id="prevBtn" class="carousel__btn" aria-label="Anterior">‹</button>
-          <button id="nextBtn" class="carousel__btn" aria-label="Siguiente">›</button>
+      
+      <!-- Galería Swiper (principal + miniaturas) -->
+      <div class="modal__figure">
+        <div class="swiper" id="parishSwiper" aria-roledescription="carrusel">
+          <div class="swiper-wrapper" id="parishSwiperWrapper"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev" aria-label="Anterior"></div>
+          <div class="swiper-button-next" aria-label="Siguiente"></div>
         </div>
-        <div class="carousel__dots" id="carouselDots" aria-label="Paginación del carrusel"></div>
+        <div class="swiper thumbs" id="parishThumbs" aria-label="Miniaturas">
+          <div class="swiper-wrapper" id="parishThumbsWrapper"></div>
+        </div>
       </div>
-      <div id="modalContent" class="modal__content prose"></div>
+
+      <!-- Nodos legacy ocultos (para evitar errores del carrusel anterior) -->
+      <div style="display:none">
+        <div id="carouselViewport"></div>
+        <div id="carouselDots"></div>
+        <div id="carouselThumbs"></div>
+        <button id="prevBtn"></button>
+        <button id="nextBtn"></button>
+      </div>
+<div id="modalContent" class="modal__content prose"></div>
     </div>
   </div>
 </div>
@@ -52,5 +70,9 @@
 </footer>
 
 <script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="waypoints.js"></script>
+  
 </body>
 </html>

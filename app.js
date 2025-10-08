@@ -12,8 +12,16 @@ const modalTitle = document.getElementById('modalTitle');
 const modalContent = document.getElementById('modalContent');
 const carouselViewport = document.getElementById('carouselViewport');
 const dotsEl = document.getElementById('carouselDots');
+const thumbsEl = document.getElementById('carouselThumbs');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+// Mapeo de nombres a mostrar en el listado
+const DISPLAY_NAME_OVERRIDES = {
+  "Agueria": "Agüeria",
+  "San Claudio": "San Claudio"
+};
+function displayParishName(name){ const cleaned=(name||'').replaceAll('_',' ').trim(); const overrides={ 'Agueria':'Agüeria','San_Claudio':'San Claudio','San Claudio':'San Claudio' }; return overrides[name]||overrides[cleaned]||cleaned; }
+
 
 let carouselIndex = 0;
 let currentSlides = [];
@@ -126,7 +134,7 @@ function renderList(){
   items.forEach(name => {
     const li = document.createElement('li');
     li.tabIndex = 0;
-    li.innerHTML = `<div class="parish-name">${name}</div><div class="parish-meta">Haz clic para ver detalles</div>`;
+    li.innerHTML = `<div class="parish-name">${displayParishName(name)}</div>`;
     li.addEventListener('click', () => openParish(name));
     li.addEventListener('keydown', (e)=>{ if (e.key==='Enter'||e.key===' ') { e.preventDefault(); openParish(name);} });
     listEl.appendChild(li);
@@ -174,28 +182,64 @@ setTimeout(()=>{ try{ document.getElementById('modalClose')?.focus({preventScrol
 }
 
 function renderCarousel(){
+  // construir track
   const track = document.createElement('div');
   track.className = 'carousel__track';
   track.style.transform = `translateX(-${carouselIndex*100}%)`;
+
   currentSlides.forEach(src => {
-    const slide = document.createElement('div'); slide.className = 'carousel__slide';
-    const img = document.createElement('img'); img.loading = 'lazy'; img.alt = 'Imagen de ejemplo'; img.src = src;
-    slide.appendChild(img); track.appendChild(slide);
+    const slide = document.createElement('div');
+    slide.className = 'carousel__slide';
+    const img = document.createElement('img');
+    img.loading = 'lazy';
+    img.alt = 'Imagen de ejemplo';
+    img.src = src;
+    slide.appendChild(img);
+    track.appendChild(slide);
   });
-  carouselViewport.innerHTML = ''; carouselViewport.appendChild(track);
+
+  // limpiar y montar visor
+  carouselViewport.innerHTML = '';
+  carouselViewport.appendChild(track);
+
+  // dots
   dotsEl.innerHTML = '';
   currentSlides.forEach((_,i)=>{
-    const dot = document.createElement('button'); dot.className = 'carousel__dot';
+    const dot = document.createElement('button');
+    dot.className = 'carousel__dot';
     dot.setAttribute('aria-current', i===carouselIndex ? 'true':'false');
-    dot.addEventListener('click', ()=>{ carouselIndex=i; renderCarousel();
-resetModalScrollDeferred();
-hookCarouselImageLoads();resetModalScrollDeferred();
-hookCarouselImageLoads();
-resetModalScrollDeferred();
-  try{ resetModalScroll(); }catch(e){}
- });
+    dot.addEventListener('click', ()=>{ carouselIndex=i; renderCarousel(); try{ resetModalScroll(); }catch(e){} });
     dotsEl.appendChild(dot);
   });
+
+  // miniaturas
+  if (typeof thumbsEl !== 'undefined' && thumbsEl){
+    thumbsEl.innerHTML = '';
+    currentSlides.forEach((src,i)=>{
+      const btn = document.createElement('button');
+      btn.className = 'carousel__thumb';
+      btn.setAttribute('role','listitem');
+      btn.setAttribute('aria-label', `Miniatura ${i+1}`);
+      btn.setAttribute('aria-current', i===carouselIndex ? 'true':'false');
+      const im = document.createElement('img');
+      im.alt = `Miniatura ${i+1}`;
+      im.loading = 'lazy';
+      im.src = src;
+      btn.appendChild(im);
+      btn.addEventListener('click', ()=>{ carouselIndex=i; renderCarousel(); try{ resetModalScroll(); }catch(e){} });
+      thumbsEl.appendChild(btn);
+    });
+  }
+
+  // Mostrar/ocultar controles cuando solo hay 1 imagen
+  const hasMany = currentSlides && currentSlides.length > 1;
+  try{
+    prevBtn.style.display = hasMany ? '' : 'none';
+    nextBtn.style.display = hasMany ? '' : 'none';
+    dotsEl.style.display = hasMany ? '' : 'none';
+    if (typeof thumbsEl !== 'undefined' && thumbsEl){ thumbsEl.style.display = hasMany ? '' : 'none'; }
+  }catch(e){}
+
 }
 
 prevBtn.addEventListener('click', ()=>{ carouselIndex = (carouselIndex - 1 + currentSlides.length) % currentSlides.length; renderCarousel();
@@ -222,7 +266,13 @@ function closeModal(){
 }
 document.getElementById('modalClose').addEventListener('click', closeModal);
 modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
-window.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.getAttribute('aria-hidden')==='false') closeModal(); });
+window.addEventListener('keydown', (e)=>{
+  const open = modal.getAttribute('aria-hidden')==='false';
+  if(e.key==='Escape' && open) return closeModal();
+  if(!open) return;
+  if(e.key==='ArrowLeft' && currentSlides.length>1){ e.preventDefault(); try{ prevBtn.click(); }catch(_){} }
+  if(e.key==='ArrowRight' && currentSlides.length>1){ e.preventDefault(); try{ nextBtn.click(); }catch(_){} }
+});
 
 loadSVGInline().catch(err=>{
   console.error('Error cargando SVG', err);
@@ -343,3 +393,113 @@ function mdToHTML(src){
   return html;
 }
 
+
+
+// === Galería con Swiper + miniaturas y reset de scroll ===
+let parishSwiperInstance = null;
+let parishThumbsInstance = null;
+
+function resetPopupScroll(){
+  try{
+    const bodyEl = document.querySelector('.modal__body');
+    const contentEl = document.getElementById('modalContent');
+    if (bodyEl) bodyEl.scrollTop = 0;
+    if (contentEl) contentEl.scrollTop = 0;
+    // Por compatibilidad con tu ejemplo:
+    const modalContenido = document.getElementById('modalContenido');
+    if (modalContenido) modalContenido.scrollTop = 0;
+    // Y por si la página hace scroll en el documento:
+    try{ document.documentElement.scrollTop = 0; document.body.scrollTop = 0; }catch(e){}
+  }catch(e){}
+}
+
+function mountThumbsWith(images){
+  const wrap = document.getElementById('parishThumbsWrapper');
+  const thumbs = document.getElementById('parishThumbs');
+  if (!wrap) return;
+  wrap.innerHTML='';
+  const arr = images||[];
+  if (thumbs) thumbs.style.display = (arr.length<=1)?'none':'';
+  (images || []).forEach((src, idx) => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+    const img = document.createElement('img');
+    img.loading = 'lazy'; img.decoding = 'async'; img.alt = 'Miniatura ' + (idx+1);
+    img.src = src;
+    slide.appendChild(img);
+    wrap.appendChild(slide);
+  });
+  if (parishThumbsInstance && parishThumbsInstance.destroy) {
+    parishThumbsInstance.destroy(true, true);
+    parishThumbsInstance = null;
+  }
+  parishThumbsInstance = new Swiper('#parishThumbs', {
+    slidesPerView: 'auto', spaceBetween: 8, freeMode: true,
+    watchSlidesProgress: true, slideToClickedSlide: true
+  });
+}
+
+function mountSwiperWith(images){
+  try {
+    const wrapper = document.getElementById('parishSwiperWrapper');
+    if (!wrapper) return;
+    wrapper.innerHTML = '';
+    (images || []).forEach((src, idx) => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+      const img = document.createElement('img');
+      img.loading = 'lazy'; img.decoding = 'async';
+      img.alt = 'Imagen ' + (idx+1);
+      img.src = src;
+      slide.appendChild(img);
+      wrapper.appendChild(slide);
+    });
+    if (parishSwiperInstance && parishSwiperInstance.destroy) {
+      parishSwiperInstance.destroy(true, true);
+      parishSwiperInstance = null;
+    }
+    parishSwiperInstance = new Swiper('#parishSwiper', {
+      initialSlide: 0,
+      slidesPerView: 1,
+      spaceBetween: 8,
+      centeredSlides: false,
+      loop: false,
+      preloadImages: false,
+      watchOverflow: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      keyboard: { enabled: true },
+      lazy: true,
+      thumbs: (parishThumbsInstance ? { swiper: parishThumbsInstance } : undefined)
+    });
+    try{ parishSwiperInstance.slideTo(0,0); }catch(e){}
+  } catch(e){ console.warn('Swiper init error', e); }
+}
+
+// Override openParish: siempre reset de scroll y primera imagen
+(function(){
+  const modalEl = document.getElementById('modal');
+  const modalTitleEl = document.getElementById('modalTitle');
+  const modalContentEl = document.getElementById('modalContent');
+
+  const originalOpenParish = window.openParish;
+
+  window.openParish = function(name){
+    const data = parishData[name] || { title: name, desc: '', images: [] };
+    modalTitleEl.textContent = data.title || name;
+    modalContentEl.innerHTML = mdToHTML(data.desc || '');
+    const imgs = (data.images && data.images.length) ? data.images : (placeholderImagesFor ? placeholderImagesFor(name) : []);
+
+    mountThumbsWith(imgs);
+    mountSwiperWith(imgs); // primera imagen
+
+    modalEl.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+
+    // Reset scroll: ahora, en el siguiente frame y tras 0ms
+    resetPopupScroll();
+    try{ requestAnimationFrame(()=>{ resetPopupScroll(); setTimeout(resetPopupScroll,0); }); }catch(e){}
+
+    try { document.getElementById('modalClose').focus(); } catch(e){}
+  };
+})();

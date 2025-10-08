@@ -1,0 +1,450 @@
+{
+  "Bendones": [
+    {
+      "id": "bendones-santa-maria-de-bendones",
+      "title": "Santa María de Bendones",
+      "desc": "Esta iglesia prerrománica, adscrita al periodo de Alfonso II, presenta similitudes a San Julián de los Prados. Se encuentra en la aldea de Bendones y aunque no se tienen datos exactos de su cronología, se cree que fue construida en el siglo IX y X y donada a la Catedral de San Salvador. El aspecto actual es el resultado de una reconstrucción tras haber sido destruida durante la guerra civil. Consta de un gran transepto; una triple cabecera rectangular con ventana trifora; un nártex o vestíbulo simple con dependencias laterales aisladas de la nave; dos recintos rectangulares a los lados, cuya función se desconoce y junto a ella, aparece una torre exenta que no pertenece al mismo periodo.",
+      "images": [
+        "assets/waypoints/bendones-santa-maria-de-bendones/1.png"
+      ],
+      "pos": {
+        "vx": 76.99509363380253,
+        "vy": 66.42832899840599
+      }
+    }
+  ],
+  "Box": [
+    {
+      "id": "box-casa-natal-de-tino-casal",
+      "title": "Casa Natal de Tino Casal",
+      "desc": "Ubicada en Cotariello. Construida en los siglos XVI y XVII, con escudo en la fachada noble.",
+      "images": [
+        "assets/waypoints/box-casa-natal-de-tino-casal/1.png"
+      ],
+      "pos": {
+        "vx": 94.07573610069244,
+        "vy": 61.635562473197055
+      }
+    }
+  ],
+  "Brañes": [
+    {
+      "id": "branes-puente-romano-de-branes",
+      "title": "Puente Romano de Brañes",
+      "desc": "En Laviada. Este puente medieval, de tres arcos, comunicaba Oviedo con Siero a través del río Nora. Tiene 46 metros de longitud y 6 metros de altura.",
+      "images": [
+        "assets/waypoints/branes-puente-romano-de-branes/1.png"
+      ],
+      "pos": {
+        "vx": 36.639224992283275,
+        "vy": 14.596413139310984
+      }
+    }
+  ],
+  "Caces": [
+    {
+      "id": "caces-iglesia-de-san-juan-bautista",
+      "title": "Iglesia de San Juan Bautista",
+      "desc": "Cuenta con portada de estilo románico, caracterizada por la sencillez y austeridad, con un arco sobre capiteles y jambas lisas. En el interior se conserva un retablo del siglo XVIII y una talla de la Inmaculada que pertenecía al desaparecido Monasterio de San Francisco.",
+      "images": [
+        "assets/waypoints/caces-iglesia-de-san-juan-bautista/1.png"
+      ],
+      "pos": {
+        "vx": 27.885383524636875,
+        "vy": 68.80720148032533
+      }
+    }
+  ],
+  "Colloto": [
+    {
+      "id": "colloto-llagares-de-colloto",
+      "title": "Llagares de Colloto",
+      "desc": "Texto para la descripcion del punto de interés",
+      "images": [
+        "assets/waypoints/colloto-llagares-de-colloto/1.png"
+      ],
+      "pos": {
+        "vx": 79.34300620815594,
+        "vy": 37.6595718391752
+      }
+    }
+  ],
+  "Cruces": [
+    {
+      "id": "cruces-san-esteban-de-las-cruces",
+      "title": "San Esteban de las Cruces",
+      "desc": "Se ubica en La Barraca, y está dedicada a San Esteban. Está compuesta por una nave, cabecera cuadrada, pórtico cerrado y espadaña. Junto a ella se encuentra el cementerio parroquial.",
+      "images": [
+        "assets/waypoints/cruces-san-esteban-de-las-cruces/1.png"
+      ]
+    }
+  ],
+  "Godos": [
+    {
+      "id": "godos-iglesia-de-santa-maria",
+      "title": "Iglesia de Santa María",
+      "desc": "Edificada en Godos entre 1964 y 1966 por Juan Vallaure Fernández-Peña en estilo brutalista, construida tras el derribo del templo anterior, que estaba dedicado a San Tirso.",
+      "images": [
+        "assets/waypoints/godos-iglesia-de-santa-maria/1.png"
+      ],
+      "pos": {
+        "vx": 23.565608812394007,
+        "vy": 59.307216657361394
+      }
+    }
+  ],
+  "Latores": [
+    {
+      "id": "latores-palacio-de-marcerado",
+      "title": "Palacio de Marcerado",
+      "desc": "Construido en los siglos XVII-XVIII a partir de una torre defensiva. Su fachada es de piedra y a ambos lados del balcón de voladizo se encuentran los escudos familiares. Cuenta con una capilla. llamada la Velilla, en la que está sepultado el que fuera alcalde de Oviedo, Felipe Suárez. Está ubicado al sur de Latores y hoy día se conoce la zona como el Monte del Palacio, en el que destacan impresionantes ejemplares arbóreos que bordean la carretera.",
+      "images": [
+        "assets/waypoints/latores-palacio-de-marcerado/1.png"
+      ],
+      "pos": {
+        "vx": 52.04887852551383,
+        "vy": 59.41495119636958
+      }
+    }
+  ],
+  "Limanes": [
+    {
+      "id": "limanes-ceramica-de-faro",
+      "title": "Cerámica de Faro",
+      "desc": "En el siglo XVII, había 72 alfareros en esta localidad, llegando a constituir una importante industria. Realizan tanto piezas oscuras, debido a la cocción reductora, como piezas vidriadas con motivos propios y colores azules.",
+      "images": [
+        "assets/waypoints/limanes-ceramica-de-faro/1.png"
+      ],
+      "pos": {
+        "vx": 82.53073910752542,
+        "vy": 51.967108183782884
+      }
+    }
+  ],
+  "Loriana": [
+    {
+      "id": "loriana-camino-primitivo",
+      "title": "Camino Primitivo",
+      "desc": "Texto para la descripcion del punto de interés",
+      "images": [
+        "assets/waypoints/loriana-camino-primitivo/1.png"
+      ],
+      "pos": {
+        "vx": 36.79015388840356,
+        "vy": 35.37257178497211
+      }
+    }
+  ],
+  "Manzaneda": [
+    {
+      "id": "manzaneda-fuente-barroca-de-la-manzaneda",
+      "title": "Fuente Barroca de la Manzaneda",
+      "desc": "Un poco antes de llegar al pueblo de la Manzaneda, al pie de la carretera AS-242, se encuentra esta espléndida fuente pública de finales del siglo XVIII, con motivos ornamentales escultóricos de estilo Barroco. Obra del arquitecto Manuel Reguera, se hizo para conmemorar las obras de la carretera de Castilla.",
+      "images": [
+        "assets/waypoints/manzaneda-fuente-barroca-de-la-manzaneda/1.png"
+      ],
+      "pos": {
+        "vx": 69.23819725400763,
+        "vy": 79.43593323158868
+      }
+    }
+  ],
+  "Naranco": [
+    {
+      "id": "naranco-san-miguel-de-lillo",
+      "title": "San Miguel de Lillo",
+      "desc": "Patrimonio de la humanidad). Templo que también pertenece a la época del reinado de Ramiro I (842-850). Se cree que la iglesia fue levantada en el año 848. Su estructura original difiere de la que actualmente conservamos, pues un tercio de la construcción, su tramo oriental, fue derrumbado parcialmente en el siglo XI.  Se trata de un edificio de planta basilical con tres naves, la central más alta y ancha, divididas por columnas. En el piso superior se encuentra la tribuna regia donde los reyes acudían a misa. Decoración escultórica en capiteles,  basas y jambas de acceso con motivos vegetales, figurativos, sogueado, etc. Exterior rodeado por contrafuertes. Ventanales y óculos cubiertos con celosías en piedra. En su interior conserva restos de pinturas murales en las bóvedas, paño occidental de la nave central y en el ábside. Esta iglesia ha sido catalogada como Patrimonio de la Humanidad por la UNESCO en 1985.",
+      "images": [
+        "assets/waypoints/naranco-san-miguel-de-lillo/1.png"
+      ],
+      "pos": {
+        "vx": 47.80008698572401,
+        "vy": 33.66838637257394
+      }
+    },
+    {
+      "id": "naranco-santa-maria-del-naranco",
+      "title": "Santa María del Naranco",
+      "desc": "Patrimonio de la humanidad). Iglesia construida durante el reinado de Ramiro I, alrededor del año 842. Esta edificación no se proyectó en origen con la idea de que fuese exclusivamente una iglesia, sino como un edificio de uso religioso y civil. El templo cuenta con una planta rectangular de dos niveles (uno inferior cerrado, y el superior con miradores laterales). La bóveda del piso principal está conformada por un arco de medio punto reforzado con fajones. En el piso inferior se encuentra la cripta,  de la que debido a las últimas investigaciones, algunos historiadores piensan que pudo acoger  el sepulcro de Ramiro I. Cuenta con un altar con funciones eucarísticas en el mirador oriental y ventanas ajimezadas en la parte alta de la construcción. Tiene decoración con figuración animal (en los medallones) y humana en las pilastras exteriores y en los arcos fajones del interior; también hay una representación de la Cruz Griega con alpha y omega. En su estructura, se hace uso de la mampostería para los muros. El exterior está rodeado por contrafuertes estriados. Esta iglesia ha sido catalogada como Monumento Nacional y Patrimonio de la Humanidad por la UNESCO en 1985.",
+      "images": [
+        "assets/waypoints/naranco-santa-maria-del-naranco/1.png"
+      ],
+      "pos": {
+        "vx": 49.53958311980167,
+        "vy": 33.61377132862209
+      }
+    }
+  ],
+  "Naves": [
+    {
+      "id": "naves-iglesia-parroquial-de-san-pedro",
+      "title": "Iglesia Parroquial de San Pedro",
+      "desc": "Ubicada en el núcleo de Campo. El templo presenta planta en cruz latina, con cabecera cuadrada y espadaña de dos arcos entre pináculos.  Al oeste de la misma, se encuentra el cementerio.",
+      "images": [
+        "assets/waypoints/naves-iglesia-parroquial-de-san-pedro/1.png"
+      ],
+      "pos": {
+        "vx": 82.78411508736406,
+        "vy": 59.91069134426121
+      }
+    }
+  ],
+  "Nora": [
+    {
+      "id": "nora-meandros-del-nora",
+      "title": "Meandros del Nora",
+      "desc": "Marcan la frontera entre el concejo de Oviedo y el de Las Regueras y conforman su último tramo antes de unirse al Nalón. Pueden verse desde el norte de Priañes. Son Monumento Natural desde 2003 y destacan por la presencia de numerosas aves durante el invierno. El paisaje cuenta con tres miradores, uno mencionado anteriormente, situado en Priañes, y otros dos en Rañaces pueblo perteneciente a Grado.",
+      "images": [
+        "assets/waypoints/nora-meandros-del-nora/1.png"
+      ],
+      "pos": {
+        "vx": 21.021996400862964,
+        "vy": 42.45453271130715
+      }
+    }
+  ],
+  "Olloniego": [
+    {
+      "id": "olloniego-conjunto-historico-de-olloniego",
+      "title": "Conjunto Histórico de Olloniego",
+      "desc": "El Conjunto de Olloniego fue declarado Conjunto Histórico el 30 de Mayo de 1991 (BOPA 17-6-1991). Se trata de un complejo de edificaciones de origen medieval que reúne una obra religiosa, una obra civil y una obra de ingeniería, y se encuentra junto al río Nalón, que era una importante ruta de intercambio comercial entre Oviedo y León. El puente constaba de cinco arcos de diferente altura, aunque actualmente cuenta solo con tres, siendo el del centro más apuntado. Actualmente ya no está en el cauce del río Nalón debido al desvío del mismo provocado por una riada en 1676. También está declarado Lugar de Interés Geológico. La Torre Muñiz, de forma circular, se construyó con carácter defensivo en el S. XIV; se dice que desde allí se vigilaba el paso por el puente y se aseguraba el cobro del peaje. En el S. XVI se convirtió en el Palacio de la familia Quirós. La Iglesia de San Pelayo, en el cementerio, está recogida en el Inventario del Patrimonio Arquitectónico de Asturias. La Capilla puede tener su origen en la época prerrománica, aunque la construcción actual es del S. XIV, con remodelaciones en los S. XVI y XVII. También encontramos los restos del Hospital de Peregrinos de Olloniego, que a finales del S. XVIII formaba parte de una cadena de hospitales entre Pajares y Oviedo. Están en el barrio de La Plazuela y actualmente es utilizado como vivienda.",
+      "images": [
+        "assets/waypoints/olloniego-conjunto-historico-de-olloniego/1.png"
+      ],
+      "pos": {
+        "vx": 66.78818596602882,
+        "vy": 85.53403120445978
+      }
+    }
+  ],
+  "Pando": [
+    {
+      "id": "pando-san-cipriano-de-pando",
+      "title": "San Cipriano de Pando",
+      "desc": "Fue donada por Ordoño II a la Catedral de Oviedo en el siglo X. El antiguo templo parroquial de San Cipriano de Pando fue destruido durante la Guerra Civil, en su lugar se reedificó el actual, en el que queda algún vestigio de cierta antigüedad, como las losetas del suelo y la pila bautismal. Desde el cerro donde se encuentra hay buenas vistas al valle y a la ciudad de Oviedo.",
+      "images": [
+        "assets/waypoints/pando-san-cipriano-de-pando/1.png"
+      ]
+    }
+  ],
+  "Pereda": [
+    {
+      "id": "pereda-iglesia-de-san-martin",
+      "title": "Iglesia de San Martín",
+      "desc": "Se trata de una iglesia parroquial de estilo románico-bizantino ubicada en La Pereda. Esta construcción fue una donación del rey Ordoño I a San Salvador de Oviedo. Sufrió diversas modificaciones, pero conserva elementos originales, como la portada occidental y el arco triunfal.",
+      "images": [
+        "assets/waypoints/pereda-iglesia-de-san-martin/1.png"
+      ],
+      "pos": {
+        "vx": 59.040023285608754,
+        "vy": 70.7683861975127
+      }
+    }
+  ],
+  "Piedramuelle": [
+    {
+      "id": "piedramuelle-construcciones-militares",
+      "title": "Construcciones Militares",
+      "desc": "Piedramuelle fue una zona estratégica durante la guerra, debido a su ubicación.",
+      "images": [
+        "assets/waypoints/piedramuelle-construcciones-militares/1.png"
+      ],
+      "pos": {
+        "vx": 38.30086707281086,
+        "vy": 55.83614120114665
+      }
+    },
+    {
+      "id": "piedramuelle-iglesia-de-santa-marina",
+      "title": "Iglesia de Santa Marina",
+      "desc": "Es la iglesia parroquial, construida en el año 1767. Consta de una nave rectangular con pórtico a los pies y sobre la entrada destaca la espadaña de dos huecos.",
+      "images": [
+        "assets/waypoints/piedramuelle-iglesia-de-santa-marina/1.png"
+      ],
+      "pos": {
+        "vx": 40.79666063312189,
+        "vy": 55.92165926869884
+      }
+    }
+  ],
+  "Pintoria": [
+    {
+      "id": "pintoria-iglesia-de-santa-maria-de-pintoria",
+      "title": "Iglesia de Santa María de Pintoria",
+      "desc": "Nada más llegar nos encontramos con su iglesia, dedicada a la Asunción de María. Algunos autores indican que el primitivo templo prerrománico se encontraría al otro lado del pueblo, pudiendo haber restos conformando la hoy capilla de Santa Tecla.",
+      "images": [
+        "assets/waypoints/pintoria-iglesia-de-santa-maria-de-pintoria/1.png"
+      ],
+      "pos": {
+        "vx": 22.00526733695423,
+        "vy": 65.37717072843398
+      }
+    },
+    {
+      "id": "pintoria-ermita-de-santa-tecla",
+      "title": "Ermita de Santa Tecla",
+      "desc": "Se encuentra en el extremo opuesto de la iglesia Parroquial y alejado del núcleo poblacional, en un alto llamado La Llana. Aunque la capilla es pública, se encuentra en una finca particular, cercada.",
+      "images": [
+        "assets/waypoints/pintoria-ermita-de-santa-tecla/1.png"
+      ],
+      "pos": {
+        "vx": 20.643926150686827,
+        "vy": 67.00411644179111
+      }
+    }
+  ],
+  "Priorio": [
+    {
+      "id": "priorio-balneario-de-las-caldas",
+      "title": "Balneario de las Caldas",
+      "desc": "Es el principal punto de interés de la parroquia. Es obra del arquitecto Manuel Reguera, siguiendo planos de Ventura Rodríguez. Se inauguró 1776, convirtiéndose en un importante centro de curación sobre todo para el reuma. Contaba con dos alturas, el bajo destinado a instalaciones sanitarias y el superior a habitaciones. En el año 1860, fue adquirido por José González Alegre, quien lo reformó dotándolo de una planta más. Dado el éxito del lugar, se construyó otro edificio enfrente unido al edificio principal mediante una pasarela de hierro y cristal, inaugurándose  en 1878 y dedicándolo a hotel. Finalmente, en 1896, se construyó adosado al hotel y frente al balneario, un casino, de dos pisos con fachada de estilo ecléctico. Al lado del casino se extiende el parque del balneario y también cuenta con una capilla dedicada al Cristo de la Salud. Actualmente alberga un complejo termal con balneario, spa y dos hoteles.",
+      "images": [
+        "assets/waypoints/priorio-balneario-de-las-caldas/1.png"
+      ]
+    }
+  ],
+  "Puerto": [
+    {
+      "id": "puerto-estacion-del-fuso-de-la-reina",
+      "title": "Estación del Fuso de la Reina",
+      "desc": "Estación de ferroviaria que hace de buen ejemplo de arqueología industrial. En sus tiempos fue un importante enclave ferroviario. Durante muchos años todos los trenes desde Oviedo al Occidente pasaron por ella y dejaron de hacerlo en 2009.",
+      "images": [
+        "assets/waypoints/puerto-estacion-del-fuso-de-la-reina/1.png"
+      ],
+      "pos": {
+        "vx": 33.58910069406673,
+        "vy": 73.73954628559935
+      }
+    }
+  ],
+  "San_Claudio": [
+    {
+      "id": "san-claudio-iglesia-de-santa-maria",
+      "title": "Iglesia de Santa María",
+      "desc": "",
+      "images": [
+        "assets/waypoints/san-claudio-iglesia-de-santa-maria/1.png"
+      ],
+      "pos": {
+        "vx": 32.33647874716166,
+        "vy": 47.146823393145084
+      }
+    }
+  ],
+  "Santianes": [
+    {
+      "id": "santianes-iglesia-de-san-juan",
+      "title": "Iglesia de San Juan (BIC)",
+      "desc": "Ubicada en Santianes, se trata de una iglesia de origen medieval, aunque el actual edificio fue levantado en el s. XVIII. La primera noticia que se conserva de la parroquia es la donación de su territorio a la Iglesia de San Salvador en los años 827 y 857. En un lateral del templo hay una placa que conmemora al presbítero Pelayo, descendiente de García, que lo reformó y puso bajo la advocación de San Juan. Es un edificio pequeño que a pesar de no tener un exterior bien conservado, su interior sí que destaca por estar muy bien cuidado. Conserva en su fachada una inscripción del siglo XI.",
+      "images": [
+        "assets/waypoints/santianes-iglesia-de-san-juan/1.png"
+      ],
+      "pos": {
+        "vx": 72.43256164833862,
+        "vy": 81.15783017655541
+      }
+    }
+  ],
+  "Sograndio": [
+    {
+      "id": "sograndio-san-esteban-de-sograndio",
+      "title": "San Esteban de Sograndio",
+      "desc": "De estilo  románico, probablemente edificada en el siglo xii. La iglesia tiene una sola nave terminada en una capilla absidal y semicircular. Son destacables su portada y el arco triunfal que une nave y capilla, con una muestra de escultura medieval considerada una de las más relevantes obras de este periodo. La iglesia fue declarada Bien de Interés Cultural con categoría de Monumento el 23 de febrero de 1993.",
+      "images": [
+        "assets/waypoints/sograndio-san-esteban-de-sograndio/1.png"
+      ],
+      "pos": {
+        "vx": 28.845545133687533,
+        "vy": 57.356952515314944
+      }
+    }
+  ],
+  "Trubia": [
+    {
+      "id": "trubia-cascadas-del-guanga",
+      "title": "Cascadas del Guanga",
+      "desc": "Representan uno de los escenarios naturales más bonitos de Oviedo. Se trata de una serie de cascadas que se forman en el cauce del Arroyo de guanga hasta su llegada al barrio del Castañedo del Monte. No es fácil el acceso para ver todas las cascadas, pero si es bastante fácil realizar la ruta de senderismo que parte de San Andrés a través de un bosque de castaños hasta la última cascada de varios metros de altura. A su lado se encuentra los restos de un antiguo molino y en las proximidades el Pico Castiello con bonitas vistas del valle de Trubia.",
+      "images": [
+        "assets/waypoints/trubia-cascadas-del-guanga/1.png"
+      ],
+      "pos": {
+        "vx": 8.944492168875428,
+        "vy": 79.52847227477362
+      }
+    },
+    {
+      "id": "trubia-fabrica-de-armas-de-trubia",
+      "title": "Fábrica de Armas de Trubia",
+      "desc": "Su origen fue Fábrica Real, es decir, promovida por el Estado español para la industrialización del país. Se fundó a finales del siglo XVIII (1794), en un enclave estratégico y de difícil acceso, al lado del río Trubia, afluente del río Nalón. Francisco Antonio de Elorza, conocido como General Elorza, fue el ingeniero militar que modernizó la Fábrica, y que da nombre a una calle en el barrio de Junigro y a otra en la propia capital ovetense. El conjunto de la Fábrica incluye diversas instalaciones en estado de abandono en la mayor parte de casos: iglesia, casino de ingenieros, etc., incluyendo el monumento al General Elorza antes citado.",
+      "images": [
+        "assets/waypoints/trubia-fabrica-de-armas-de-trubia/1.png"
+      ],
+      "pos": {
+        "vx": 15.070533741772302,
+        "vy": 53.549878504072765
+      }
+    }
+  ],
+  "Udrión": [
+    {
+      "id": "udrion-ruinas-del-puente-gubin",
+      "title": "Ruinas del puente Gubín",
+      "desc": "De posible origen romano, del que se conserva un arco de medio punto con sus dos pilares. Tradicionalmente fue paso del Camín Real. Su destrucción se debió a una gran riada y durante años se hizo su paso en barca.",
+      "images": [
+        "assets/waypoints/udrion-ruinas-del-puente-gubin/1.png"
+      ],
+      "pos": {
+        "vx": 19.750070261841934,
+        "vy": 48.061648648579585
+      }
+    }
+  ],
+  "Villaperez": [
+    {
+      "id": "villaperez-puente-romano",
+      "title": "Puente Romano",
+      "desc": "En Laviada. Este puente medieval, de tres arcos, comunicaba Oviedo con Siero a través del río Nora. Tiene 46 metros de longitud y 6 metros de altura.",
+      "images": [
+        "assets/waypoints/villaperez-puente-romano/1.png"
+      ],
+      "pos": {
+        "vx": 68.05880480998741,
+        "vy": 15.33713465713016
+      }
+    }
+  ],
+  "Agüeria": [
+    {
+      "id": "agueria-palacio-de-anieves",
+      "title": "Palacio de Anieves",
+      "desc": "También conocido como Quinta Landeta, construido en 1880 y ubicado en el mismo Anieves. Además de la casa principal cuenta con otras construcciones como llagar, capilla, lavadero, cuadras, etc.",
+      "images": [
+        "assets/waypoints/agueria-palacio-de-anieves/1.png"
+      ]
+    }
+  ],
+  "La Manjoya": [
+    {
+      "id": "la-manjoya-escultura-de-santiago-apostol",
+      "title": "Escultura de Santiago Apóstol",
+      "desc": "Es una escultura de Santiago Matamoros, hecha en granito, que se instaló en 2010 con motivo de la celebración del Año Santo Compostelano.",
+      "images": [
+        "assets/waypoints/la-manjoya-escultura-de-santiago-apostol/1.png"
+      ],
+      "pos": {
+        "vx": 61.51597071511568,
+        "vy": 56.62058218548777
+      }
+    }
+  ],
+  "San Claudio": [
+    {
+      "id": "san-claudio-iglesia-de-santa-maria",
+      "title": "Iglesia de Santa María",
+      "desc": "Antigua iglesia de Santa María (IPCA).",
+      "images": [
+        "assets/waypoints/san-claudio-iglesia-de-santa-maria/1.png"
+      ]
+    }
+  ]
+}

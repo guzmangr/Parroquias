@@ -151,3 +151,257 @@ html, body {
 .sec__spacer { height: 0.3rem; }
 /* === Fin espaciado compacto === */
 
+
+
+/* === Mejora tipográfica del buscador de parroquias === */
+#searchInput{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem; /* ~18px para que se lea más grande */
+  line-height: 1.4;
+  font-weight: 500;
+}
+#searchInput::placeholder{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+/* [ADD] Popup compacto y legible */
+.modal__dialog{ width: min(100%, 760px); border-radius: 14px; padding: 12px 14px; }
+.modal__content{ font-size: clamp(0.80rem, 0.78rem + 0.24vw, 0.90rem); line-height: 1.56; }
+.prose h2{ font-size: 1.02rem } .prose h3{ font-size: 0.94rem } .prose h4{ font-size: 0.88rem }
+.carousel__viewport{ height: min(48vh, 360px); border-radius: 12px; }
+
+/* [ADD] Carrusel: flechas laterales + miniaturas */
+.carousel{ position: relative; padding-bottom: 8px; }
+.carousel__controls{ position:absolute; top:50%; left:0; right:0; display:flex; justify-content:space-between; transform:translateY(-50%); padding:0 8px; pointer-events:none; }
+.carousel__btn{ pointer-events:auto; width:44px; height:44px; border-radius:999px; padding:0; font-size:22px; display:grid; place-items:center; border:1px solid rgba(0,0,0,.08); background:rgba(255,255,255,.9); box-shadow:0 6px 20px rgba(0,0,0,.18); backdrop-filter: blur(6px); }
+.carousel__thumbs{ margin-top:10px; display:grid; grid-auto-flow:column; grid-auto-columns:minmax(64px,80px); gap:8px; overflow-x:auto; padding:4px 2px; scrollbar-width:thin; }
+.carousel__thumb{ width:100%; aspect-ratio:1/1; border-radius:10px; overflow:hidden; border:2px solid transparent; cursor:pointer; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.08); }
+.carousel__thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.carousel__thumb[aria-current="true"]{ border-color:#00326c; box-shadow:0 0 0 3px #00326c22; }
+
+
+/* === Ajuste tipográfico: aún más pequeño en popup === */
+.modal__content{
+  font-size: clamp(0.76rem, 0.74rem + 0.22vw, 0.88rem) !important;
+  line-height: 1.54 !important;
+}
+.prose h2{ font-size: 0.96rem !important; line-height: 1.22 !important; }
+.prose h3{ font-size: 0.90rem !important; line-height: 1.20 !important; }
+.prose h4{ font-size: 0.84rem !important; line-height: 1.18 !important; }
+
+/* Márgenes aún más compactos */
+.prose p{ margin: .40em 0 !important; }
+.prose ul, .prose ol{ margin: .32em 0 !important; }
+
+/* Móvil: un paso más pequeño manteniendo legibilidad */
+@media (max-width: 480px){
+  .modal__content{ font-size: clamp(0.74rem, 0.74rem + 0.2vw, 0.86rem) !important; }
+  .prose h2{ font-size: 0.92rem !important; }
+  .prose h3{ font-size: 0.88rem !important; }
+  .prose h4{ font-size: 0.82rem !important; }
+}
+/* === Fin ajuste === */
+
+
+
+/* === Centrado vertical de flechas respecto al viewport === */
+.carousel__viewport{ position: relative !important; }
+.carousel__controls{
+  position: absolute !important;
+  top: 50% !important;
+  left: 0; right: 0;
+  display: flex !important;
+  justify-content: space-between !important;
+  transform: translateY(-50%) !important;
+  padding: 0 8px !important;
+  pointer-events: none !important;
+}
+.carousel__btn{ pointer-events: auto !important; }
+/* === Fin centrado === */
+
+/* === Tipografía un punto más pequeña (Ultra) === */
+.modal__content{
+  font-size: clamp(0.72rem, 0.70rem + 0.22vw, 0.84rem) !important;
+  line-height: 1.52 !important;
+}
+.prose h2{ font-size: 0.92rem !important; line-height: 1.20 !important; }
+.prose h3{ font-size: 0.86rem !important; line-height: 1.18 !important; }
+.prose h4{ font-size: 0.80rem !important; line-height: 1.16 !important; }
+/* Márgenes aún más contenidos */
+.prose p{ margin: .36em 0 !important; }
+.prose ul, .prose ol{ margin: .30em 0 !important; }
+/* Móvil */
+@media (max-width: 480px){
+  .modal__content{ font-size: clamp(0.70rem, 0.70rem + 0.2vw, 0.82rem) !important; }
+  .prose h2{ font-size: 0.90rem !important; }
+  .prose h3{ font-size: 0.84rem !important; }
+  .prose h4{ font-size: 0.78rem !important; }
+}
+/* === Fin tipografía Ultra === */
+
+
+/* === Espaciado lateral del contenido del popup === */
+.modal__content{
+  padding-inline: 14px !important; /* respira por derecha e izquierda */
+}
+
+/* === Flechas centradas verticalmente respecto al viewport === */
+.carousel{ position: relative !important; }
+.carousel__viewport{ position: relative !important; }
+.carousel__controls{
+  position: absolute !important;
+  top: 50% !important;
+  left: 0; right: 0;
+  display: flex !important;
+  justify-content: space-between !important;
+  transform: translateY(-50%) !important;
+  padding: 0 8px !important;
+  pointer-events: none !important;
+  z-index: 5 !important;
+}
+.carousel__btn{ pointer-events: auto !important; }
+
+
+/* === Optimización slide para imágenes 1920x1080 (16:9) === */
+.carousel{
+  position: relative;
+}
+/* Forzamos un viewport con relación 16:9, adaptable y sin recortes */
+.carousel__viewport{
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  max-height: min(62vh, 720px) !important; /* evita ocupar toda la pantalla */
+  background: #0e0e0f; /* letterbox oscuro para bandas laterales/superiores */
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+/* Pistas y slides a tamaño completo del viewport */
+.carousel__track{
+  height: 100% !important;
+}
+.carousel__slide{
+  height: 100% !important;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+/* Imagen sin recortes: caber completo dentro del viewport */
+.carousel__slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;   /* clave para 1920x1080 */
+  image-rendering: auto;
+  background: transparent;
+}
+
+/* Flechas laterales centradas verticalmente dentro del viewport */
+.carousel__controls{
+  position: absolute !important;
+  top: 50% !important;
+  left: 0; right: 0;
+  display: flex !important;
+  justify-content: space-between !important;
+  transform: translateY(-50%) !important;
+  padding: 0 10px !important;
+  pointer-events: none !important;
+  z-index: 10 !important;
+}
+.carousel__btn{
+  pointer-events: auto !important;
+  width: 46px; height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(0,0,0,.35);
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+  backdrop-filter: blur(4px);
+  font-size: 22px;
+  color: #fff;
+}
+.carousel__btn:hover{ background: rgba(0,0,0,.5); }
+.carousel__btn:focus-visible{ outline: 3px solid #ffffff66; outline-offset: 2px; }
+
+/* Puntos y miniaturas mantienen tamaño; añadimos mejor contraste sobre fondo oscuro */
+.carousel__dot[aria-current="true"]{ background:#fff; }
+.carousel__thumb{ background:#111; }
+.carousel__thumb img{ object-fit: cover; }
+
+@media (max-width: 600px){
+  .carousel__viewport{
+    max-height: 46vh !important;
+  }
+  .carousel__btn{ width: 42px; height: 42px; font-size: 20px; }
+}
+/* === Fin optimización 16:9 === */
+
+
+/* === Swiper en popup === */
+.modal__dialog { border-radius: 16px; }
+.modal__body { overflow: auto; max-height: calc(100vh - 140px); }
+.modal__figure { margin: 0 0 16px 0; padding: 0; background: transparent; }
+#parishSwiper { width: 100%; height: auto; border-radius: 12px; overflow: hidden; }
+#parishSwiper .swiper-slide { display:flex; align-items:center; justify-content:center; }
+#parishSwiper .swiper-slide img { display:block; width:100%; height:auto; max-height:60vh; object-fit: contain; border-radius: 12px; }
+
+/* Controles más visibles */
+#parishSwiper .swiper-button-prev,
+#parishSwiper .swiper-button-next {
+  width: 40px; height: 40px; border-radius: 9999px;
+  background: rgba(0, 50, 108, 0.9); color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+}
+#parishSwiper .swiper-button-prev::after,
+#parishSwiper .swiper-button-next::after { font-size: 18px; }
+
+/* Paginación */
+#parishSwiper .swiper-pagination-bullet { background: #555; opacity: .6; }
+#parishSwiper .swiper-pagination-bullet-active { background: #00326c; opacity: 1; }
+
+/* Miniaturas */
+#parishThumbs { margin-top: 8px; padding: 8px 0; }
+#parishThumbs .swiper-slide {
+  width: 96px; height: 64px; opacity: .6; cursor: pointer;
+  border-radius: 8px; overflow: hidden; border: 2px solid transparent;
+}
+#parishThumbs .swiper-slide-thumb-active { opacity: 1; border-color: #00326c; }
+#parishThumbs img { display:block; width:100%; height:100%; object-fit: cover; }
+
+
+/* Tooltip de waypoints */
+.wp-tooltip{position:fixed; z-index:9999; background:#00326c; color:#fff; border-radius:10px; padding:10px 12px; box-shadow:0 8px 24px rgba(0,0,0,.25); pointer-events:none; width:min(280px, 42vw);}
+.wp-tooltip__title{margin:0 0 6px 0; font-weight:600; font-size:14px; line-height:1.2;}
+.wp-tooltip__img{display:block; width:100%; height:auto; border-radius:8px; overflow:hidden}
+.wp-tooltip::after{content:""; position:absolute; left:16px; bottom:-8px; border:8px solid transparent; border-top-color:#00326c;}
+@media (prefers-reduced-motion:no-preference){
+  .wp-tooltip{transition:opacity .12s ease, transform .12s ease;}
+}
+
+
+
+/* === Tooltip ajustes v2 (centrado, tamaño menor, responsive) === */
+.wp-tooltip{
+  text-align:center;
+  width:clamp(180px, 36vw, 240px);
+  padding:8px 10px;
+  border-radius:10px;
+}
+.wp-tooltip__title{
+  font-size:13px;
+  line-height:1.25;
+}
+.wp-tooltip__img{
+  max-height:28vh; /* evita desbordes en móviles/ventanas pequeñas */
+  object-fit:cover;
+}
+.wp-tooltip::after{
+  left:50%;
+  transform:translateX(-50%);
+}
+@media (max-width: 520px){
+  .wp-tooltip{ width:clamp(160px, 70vw, 220px); padding:8px; }
+  .wp-tooltip__title{ font-size:12.5px; }
+}
+
